@@ -1,0 +1,114 @@
+.main{
+    margin-top: 25;
+}
+
+.steps{
+    font-size: 19;
+    font-style: italic;
+    font-family: monospace;
+    color: black;
+    margin-left: 10;
+    padding-top: 18;
+    /* border-bottom-color: #007bff;
+    border-bottom-width: 1; */
+}
+
+.input{
+    font-size: 25;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.largeinput{
+    font-size: 45;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.medinput{
+    font-size: 45;
+    font-family: cursive;
+    font-style: italic;
+    border-bottom-color: #007bff;
+}
+
+.medinputLabel{
+    font-size: 45;
+    font-family: cursive;
+    font-style: italic;
+    color: #007bff;
+}
+
+.metricParent{
+    padding: 10;
+}
+
+.metricItems{
+    font-size: 20;
+    font-weight: 900;
+    border-width: 2;
+    border-color: #007bff;
+    border-radius: 15;
+    background: white;
+    color: #007bff;
+    padding: 10;
+    margin-left: 10;
+    margin-right: 10;
+    margin-bottom: 20;
+}
+
+.metricItemsSelected{
+    font-size: 20;
+    font-weight: 900;
+    border-width: 2;
+    border-color: #007bff;
+    border-radius: 15;
+    background: #007bff;
+    color: white;
+    padding: 10;
+    margin-left: 10;
+    margin-right: 10;
+    margin-bottom: 20;
+}
+
+.label_5_1{
+    font-size: 90;
+    color: #007bff;
+}
+
+.label_5_2{
+    font-size: 70;
+    color: #007bff;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.label_5_3{
+    font-size: 16;
+    opacity: 0.5;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.label_5_4{
+    font-size: 35;
+    opacity: 0.5;
+    font-family: cursive;
+    font-style: italic;
+}
+
+@keyframes shake{
+    0% { transform: translateX(0);}
+    15% { transform: translateX(-10);}
+    30% { transform: translateX(10);}
+    45% { transform: translateX(-10);}
+    60% { transform: translateX(10);}
+    75% { transform: translateX(-10);}
+    100% { transform: translateX(0);}
+}
+
+.animate{
+    animation-name: shake;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}

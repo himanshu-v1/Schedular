@@ -1,0 +1,28 @@
+<!-- <Button text="tasks works!" class="btn btn-primary"></Button> -->
+<!-- androidElevation="4" -->
+<GridLayout rows="70*, 30*" columns="75*, 25*" [ngClass]="{done: items.done}"
+    class="main">
+    <!-- <FlexboxLayout row="0" col="0" justifyContent="center"> -->
+    <FlexboxLayout row="0" col="0">
+        <ScrollView>
+            <Label
+                [text]="items.task"
+                textWrap="true" style="font-size: 20;">
+            </Label>
+        </ScrollView>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column" row="0" col="1" class="alignText">
+        <GridLayout rows="*" columns="*,*">
+            <Label [text]="items.taskedQty" class="blackText" row="0" col="0"></Label>
+            <Label [text]="items.metric" class="blackText" row="0" col="1"></Label>
+        </GridLayout>
+        <GridLayout rows="*" columns="*,*">
+            <Label [text]="items.compQyt" row="0" col="0"></Label>
+            <Label [text]="items.metric" row="0" col="1"></Label>
+        </GridLayout>
+    </FlexboxLayout>
+    <FlexboxLayout row="1" col="0" colSpan="2" justifyContent="center" alignItems="center">
+        <Label text="&#xf017;" class="far" style="margin-top: 3;"></Label>
+        <Label text="{{items.remTime || '--:--'}}" style="margin-left: 10;" class="blackText"></Label>
+    </FlexboxLayout>
+</GridLayout>

@@ -1,0 +1,21 @@
+<RadSideDrawer (tap)="hideFullscreen()">
+    <StackLayout class="sideMenu" tkDrawerContent>
+        <GridLayout rows="9*,1*" columns="*">
+            <FlexboxLayout flexDirection="column"
+                justifyContent="center" alignItems="center" height="100%"
+                row="0" col="0">
+                <Label text="&#xf2f9;" class="fas sideMenuItems" (tap)="reset()"></Label>
+                <Label text="Reset All Data" class="sideMenuItems" (tap)="reset()"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout row="1" col="0" justifyContent="center" alignItems="center">
+                <Label text="&#xf004;" class="fas author"></Label>
+                <Label text="Himanshu Sharma" class="author"></Label>
+            </FlexboxLayout>
+        </GridLayout>
+        <!-- <Label text="Test Menu 2" class="sideMenuItems"></Label>
+        <Label text="Test Menu 3" class="sideMenuItems"></Label> -->
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <page-router-outlet></page-router-outlet>
+    </StackLayout>
+</RadSideDrawer>

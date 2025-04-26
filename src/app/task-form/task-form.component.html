@@ -1,0 +1,79 @@
+<StackLayout class="main">
+    <!-- (tap)="doubleCheck()" -->
+    <GridLayout rows="*,8*,3*" columns="*">
+        <FlexboxLayout row="0" col="0" justifyContent="center" alignItems="baseline">
+            <!-- <Label text="{{'Step ' + stepCount + '     '}}" class="steps"></Label> -->
+            <Label [text]="stepArray[stepCount-1]" class="steps"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="column" justifyContent="center" row="1" col="0">
+            <StackLayout *ngIf="stepCount==1">
+                    <TextView width="90%" height="200" autocorrect="false"
+                        class="input" textAlignment="center"
+                        [(ngModel)]="submittedData.task" [hint]="appliedHint[0]"
+                        [ngStyle]="{'opacity':opacity[0]?'0.2':'1'}"
+                        (focus)="changeTaskOpacity(false, 0, 'task')"
+                        (blur)="changeTaskOpacity(true, 0, 'task')"></TextView>
+                        <!-- (tap)="check()" -->
+            </StackLayout>
+            <StackLayout *ngIf="stepCount==2">
+                <FlexboxLayout flexWrap="wrap" class="metricParent">
+                    <Label *ngFor="let item of metricArray; let i = index;"
+                        [text]="item" (tap)="metricSelected(i)" [ngClass]="metricItemClass[i]"></Label>
+                </FlexboxLayout>
+            </StackLayout>
+            <StackLayout *ngIf="stepCount==3">
+                <TextField [hint]="appliedHint[1]"
+                    autocorrect="false" textAlignment="center"
+                    class="largeinput" width="200" height="100"
+                    [(ngModel)]="submittedData.taskedQty"
+                    [ngStyle]="{'opacity':opacity[1]?'0.2':'1'}"
+                    (focus)="changeTaskOpacity(false, 1, 'taskedQty')"
+                    (blur)="changeTaskOpacity(true, 1, 'taskedQty')"></TextField>
+            </StackLayout>
+            <StackLayout *ngIf="stepCount==4">
+                <GridLayout rows="auto" columns="3*,*" width="300">
+                    <FlexboxLayout justifyContent="space-around" row="0" col="0">
+                        <TextField [hint]="appliedHint[2]" autocorrect="false" textAlignment="center" class="medinput" width="70" height="60"
+                                [(ngModel)]="hour" maxLength="2"
+                                [ngStyle]="{'opacity':opacity[2]?'0.2':'1'}"
+                                (focus)="focusHour()"
+                                (blur)="blurHour()"></TextField>
+                                <!-- (focus)="changeTaskOpacity(false, 2, 'remTime')"
+                                (blur)="changeTimeOpacity(2)"></TextField> -->
+                        <Label text=":" class="medinputLabel"></Label>
+                        <TextField [hint]="appliedHint[3]" autocorrect="false" textAlignment="center" class="medinput" width="70" height="60"
+                                [(ngModel)]="minutes" maxLength="2"
+                                [ngStyle]="{'opacity':opacity[3]?'0.2':'1'}"
+                                (focus)="focusMin()"
+                                (blur)="blurMin()"></TextField>
+                                <!-- (focus)="changeTaskOpacity(false, 3, 'remTime')"
+                                (blur)="changeTimeOpacity(3)"></TextField> -->
+                    </FlexboxLayout>
+                    <FlexboxLayout justifyContent="space-around" row="0" col="1">
+                        <Label [text]="timeText" class="medinputLabel" (tap)="changeText()"></Label>
+                    </FlexboxLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="stepCount==5">
+                <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center">
+                    <Label text="&#xf6ec;" class="fas label_5_1"></Label>
+                    <Label text="Awesome!!!" class=" label_5_2" style="margin-bottom: 25;"></Label>
+                    <Label text="Let's create this task by cliking green button." class=" label_5_3"></Label>
+                    <Label text="All the Best !" class=" label_5_3"></Label>
+                </FlexboxLayout>
+            </StackLayout>
+        </FlexboxLayout>
+        <GridLayout rows="*" columns="*,*" row="2" col="0">
+            <FlexboxLayout justifyContent="center" row="0" col="0" alignItems="center">
+                <ns-buttons [text]="commons['prev']" [color]="commons['white']" [size]="commons['round']" (tapp)="previous($event)" *ngIf="showPrev==true"></ns-buttons>
+                <ns-buttons [text]="commons['close']" [color]="commons['red']" [size]="commons['round']" (tapp)="cancel($event)" *ngIf="stepCount == 1 && isEdit != true"></ns-buttons>
+            </FlexboxLayout>
+            <FlexboxLayout justifyContent="center" row="0" col="1" alignItems="center">
+                <FlexboxLayout [ngClass]="animateObj" *ngIf="showNext==true">
+                    <ns-buttons [text]="commons['next']" [color]="commons['white']" [size]="commons['round']" (tapp)="next($event)"></ns-buttons>
+                </FlexboxLayout>
+                <ns-buttons [text]="commons['check']" [color]="commons['green']" [size]="commons['round']" (tapp)="submit($event)" *ngIf="stepCount == 5"></ns-buttons>
+            </FlexboxLayout>
+        </GridLayout>
+    </GridLayout>
+</StackLayout>

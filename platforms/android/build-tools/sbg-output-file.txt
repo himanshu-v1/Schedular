@@ -1,0 +1,1 @@
+D:\Android\Project\NativeScript\schedular\platforms\android\app/src/main/java

@@ -1,0 +1,62 @@
+.noData{
+    font-size: 20;
+    margin-top: 5;
+    opacity: 0.3;
+}
+
+@keyframes animL{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(150);
+    }
+}
+
+.animateLeft{
+    animation-name: animL;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animR{
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-150);
+    }
+}
+
+.animateRight{
+    animation-name: animR;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.top{
+    color: teal;
+    font-size: 25;
+    height: 1;
+}
+
+@keyframes animTop{
+    from {
+        /* transform: translateY(0);  */
+        height: 0%;
+    }
+    to {
+        /* transform: translateY(200);  */
+        height: 100%;
+    }
+}
+
+.animateTop{
+    animation-name: animTop;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.options{
+    opacity: 0.1;
+}

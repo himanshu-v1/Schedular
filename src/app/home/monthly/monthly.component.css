@@ -1,0 +1,84 @@
+.main{
+    padding: 30;
+}
+
+.bItems{
+    border-width: 1;
+    border-color: blue;
+    border-radius: 50;
+    margin: 5;
+    padding: 5%;
+    font-size: 15%;
+    font-weight: bold;
+}
+
+.centerAl{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.head{
+    color: rgba(0, 0, 255, 0.726);
+    font-weight: bold;
+    font-size: 20;
+}
+
+.headDays{
+    font-weight: bold;
+    font-size: medium;
+    color: white;
+    background: #007bff;
+    border-width: 1;
+    border-radius: 50;
+    border-color: blue;
+    /* margin-left: 10;
+    margin-right: 10; */
+}
+
+.options{
+    opacity: 0.1;
+}
+
+@keyframes optionsMenu{
+    from {
+        /* top: -50; */
+        /* left: 2; */
+        width: 99%;
+        height: 0%;
+    }
+    to {
+        /* top: 2; */
+        /* left: 2; */
+        width: 99%;
+        height: 100%;
+    }
+}
+
+.optionMenuAni {
+    animation-name: optionsMenu;
+    animation-duration: 1s;
+    animation-timing-function: spring;
+    animation-fill-mode: forwards;
+}
+
+.optionText{
+    font-size: 40;
+}
+/* .optionsMenuBefore {
+    /* top: -50; *
+    height: 0;
+} */
+
+.bord{
+    border-width: 1;
+    border-color: black;
+}
+
+.picker {
+    color: blue;
+    border-width: 0;
+    /* height: 40; */
+    text-align: center;
+    font-size: 20;
+    min-height: 10 !important;
+}

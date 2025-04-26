@@ -1,0 +1,22 @@
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="btn" *ngIf="blueFull==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="btn-red" *ngIf="redFull==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="btn-green" *ngIf="greenFull==true"></Button>
+
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="dual-btn" *ngIf="blueHalf==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="dual-btn-red" *ngIf="redHalf==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="dual-btn-green" *ngIf="greenHalf==true"></Button>
+
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="tripple-btn" *ngIf="blueQtr==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="tripple-btn-red" *ngIf="redQtr==true"></Button>
+<Button [text]="text" (tap)="onTap()" androidElevation="0" class="tripple-btn-green" *ngIf="greenQtr==true"></Button>
+
+<Button text="&#xf00d;" (tap)="onTap()" androidElevation="4" class="fas" [ngClass]="roundBtnClass"
+    *ngIf="roundBtnClose==true"></Button>
+<Button text="&#xf00c;" (tap)="onTap()" androidElevation="4" class="fas" [ngClass]="roundBtnClass"
+    *ngIf="roundBtnCheck==true"></Button>
+<Button text="&#xf067;" (tap)="onTap()" androidElevation="4" class="fas" [ngClass]="roundBtnClass"
+    *ngIf="roundBtnPlus==true"></Button>
+<Button text="&#xf053;" (tap)="onTap()" androidElevation="4" class="fas" [ngClass]="roundBtnClass"
+    *ngIf="roundBtnBack==true"></Button>
+<Button text="&#xf054;" (tap)="onTap()" androidElevation="4" class="fas" [ngClass]="roundBtnClass"
+    *ngIf="roundBtnNext==true"></Button>

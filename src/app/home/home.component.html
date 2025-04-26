@@ -1,0 +1,33 @@
+<ns-side-drawer></ns-side-drawer>
+<!-- <Tabs [selectedIndex]="selectedTab" tabsPosition="bottom">
+
+   <TabStrip>
+        <TabStripItem (tap)="loadView('d')">
+            <Label text="Today's Challanges"></Label>
+            <Image src="font://&#xf02e;" class="fas"></Image>
+        </TabStripItem>
+        <TabStripItem class="special" (tap)="loadView('m')">
+            <Label text="Monthly View"></Label>
+            <Image src="font://&#xf559;" class="fas"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <GridLayout>
+            <page-router-outlet name="daily"></page-router-outlet>
+        </GridLayout>
+    </TabContentItem>
+    <TabContentItem>
+        <StackLayout>
+            <page-router-outlet name="monthly"></page-router-outlet>
+        </StackLayout>
+    </TabContentItem>
+
+</Tabs> -->
+<TabView [selectedIndex]="selectedTab"
+        androidTabsPosition="bottom"
+        selectedTabTextColor="white" tabBackgroundColor="#007bff"
+        androidSelectedTabHighlightColor="white" tabTextFontSize="300">
+        <page-router-outlet *tabItem="{ title: 'Today'}" name="daily"> </page-router-outlet>
+        <page-router-outlet *tabItem="{ title: 'Monthly View'}" name="monthly"> </page-router-outlet>
+</TabView>

@@ -1,0 +1,32 @@
+{
+	"@nstudio/nativescript-cardview": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\@nstudio\\nativescript-cardview\\platforms\\android\\include.gradle": "b9669d8865e024caa64606a276f328d63ff9686c"
+	},
+	"nativescript-fontawesome": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fontawesome\\platforms\\android\\AndroidManifest.xml": "a49c6297b29f6fca5b1b61650dae089ff2181ba0",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fontawesome\\platforms\\android\\include.gradle": "4945565d2e438104a7124474e0975db3692b0b02",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fontawesome\\platforms\\android\\README.md": "45f2f63427be0a461a7e2dfd5ff0ad5bab64068f",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fontawesome\\platforms\\android\\nativescript_fontawesome.aar": "bd0075629300e556317f2eb35edc388ca78f2728"
+	},
+	"nativescript-local-notifications": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-local-notifications\\platforms\\android\\app-release.aar": "dd1b558295d0cbef875c300dc7f8bc06f1c90ca8"
+	},
+	"nativescript-ui-sidedrawer": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-ui-sidedrawer\\platforms\\android\\TNSSideDrawer-release.aar": "e6e4d527ff85743c270768018b9ea720ec5b9dda",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-ui-sidedrawer\\platforms\\android\\typings\\sidedrawer.d.ts": "8256a2295125597755fe6a6faee866b0750e65f2"
+	},
+	"nativescript-ui-core": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-ui-core\\platforms\\android\\TNSCore-release.aar": "0e2fe0b867821ad56b8f0b9c8ac4c90f4c399e3c",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-ui-core\\platforms\\android\\typings\\core.d.ts": "5c032652edfa1719ef8c8190fc0f66d3b1c313c2"
+	},
+	"@nativescript/core": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\@nativescript\\core\\platforms\\android\\native-api-usage.json": "34ee0e9771ad7dd9d388c191734d71507a04565a"
+	},
+	"tns-core-modules-widgets": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\tns-core-modules-widgets\\platforms\\android\\widgets-release.aar": "9297981f814ee78ce5c1f44b6a361cd46e4e1d8b"
+	},
+	"nativescript-fingerprint-auth": {
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fingerprint-auth\\platforms\\android\\include.gradle": "0a8645cc3815ed77224915476c5814c80ebc1181",
+		"D:\\Android\\Project\\NativeScript\\schedular\\node_modules\\nativescript-fingerprint-auth\\platforms\\android\\nativescript_fingerprint_auth.aar": "d666d115b953bc381bf54c819320dd684c1d1916"
+	}
+}

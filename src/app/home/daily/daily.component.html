@@ -1,0 +1,42 @@
+<!-- <ListView height="100%" [items]="tempItems" *ngIf="tempItems.length!=0">
+    <ng-template let-item="item" let-i="index">
+        <ns-tasks [items]="item"></ns-tasks>
+    </ng-template>
+</ListView> -->
+<AbsoluteLayout>
+    <ScrollView *ngIf="tempItems.length!=0" top="0" left="0" width="100%" height="100%"
+            [ngClass]="{options: animateLTR}">
+        <StackLayout>
+            <GridLayout rows="*" columns="*" *ngFor="let item of tempItems; let i=index;"
+                class="li" (tap)="confirm(i)" [ngClass]="{done: item.done}">
+                <FlexboxLayout row="0" col="0" justifyContent="center" *ngIf="i!=0">
+                    <ns-tasks [items]="item"></ns-tasks>
+                </FlexboxLayout>
+            </GridLayout>
+        </StackLayout>
+    </ScrollView>
+    <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" height="100%" width="100%"
+        *ngIf="tempItems.length==1" top="0" left="0" width="100%" height="100%">
+        <ns-buttons [text]="commons['plus']" [size]="commons['round']" [color]="commons['white']" (tapp)="addTasks($event)">
+        </ns-buttons>
+        <Label text="No tasks for today!!" class="noData"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout top="0" width="100%" justifyContent="center"
+        class="top" [ngClass]="{animateTop: animateLTR}" alignItems="center"
+        (tap)="test()" *ngIf="animateLTR == true">
+        <Label style="margin-bottom: 100;" text="Completed this task ?"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout justifyContent="space-between" width="100%" top="350" *ngIf="animateLTR == true">
+        <FlexboxLayout [ngClass]="{animateLeft: animateLTR}" style="margin-left: -100;">
+            <ns-buttons [text]="this.commons['check']" [size]="this.commons['round']"
+                [color]="this.commons['green']" (tapp)="changeStatus(true)"></ns-buttons>
+        </FlexboxLayout>
+        <FlexboxLayout [ngClass]="{animateRight: animateLTR}" style="margin-right: -100;">
+            <ns-buttons [text]="this.commons['close']" [size]="this.commons['round']"
+                [color]="this.commons['red']" (tapp)="changeStatus(false)">
+            </ns-buttons>
+        </FlexboxLayout>
+    </FlexboxLayout>
+</AbsoluteLayout>

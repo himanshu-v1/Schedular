@@ -1,0 +1,60 @@
+<GridLayout rows="9*,1*" columns="*">
+    <StackLayout row="0" col="0">
+        <!-- <StackLayout class="header">
+            <FlexboxLayout justifyContent="flex-end" width="100%">
+                <Label text="&#xf00d;" class="fas headLabel" (tap)="back()"></Label>
+            </FlexboxLayout>
+        </StackLayout> -->
+        <ScrollView height="100%" *ngIf="showEmpty==false">
+            <StackLayout *ngIf="action!=actionList[1]">
+                <GridLayout rows="*" columns="90*,10*" *ngFor="let item of tempItems; let i = index;" class="li">
+                    <ns-tasks [items]="item" row="0" col="0" *ngIf="i!=0"></ns-tasks>
+                    <FlexboxLayout row="0" col="1"
+                        flexDirection="column" alignItems="center"
+                        justifyContent="center" class="crossFont" *ngIf="i!=0 && action==undefined">
+                        <Label text="&#xf00d;" class="fas" (tap)="clearItem(i)"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout row="0" col="1"
+                        flexDirection="column" alignItems="center"
+                        justifyContent="center" class="editFont" *ngIf="i!=0 && action==actionList[0]">
+                        <Label text="&#xf303;" class="fas" (tap)="editItem(i)"></Label>
+                    </FlexboxLayout>
+                </GridLayout>
+            </StackLayout>
+            <StackLayout *ngIf="action==actionList[1]">
+                <GridLayout rows="*" columns="*" *ngFor="let item of tempItems; let i = index;" class="li" [ngClass]="{done:item.done}">
+                    <ns-tasks [items]="item" row="0" col="0" *ngIf="i!=0"></ns-tasks>
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout height="100%" *ngIf="showEmpty==true">
+            <FlexboxLayout class="emptyText" flexDirection="column" justifyContent="center" alignItems="center" height="100%">
+                <Label text="Nothing yet !!!"></Label>
+                <Label text="Start adding now..."></Label>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout row="1" col="0">
+        <FlexboxLayout style="padding: 4;" justifyContent="center">
+            <!-- <ns-buttons [text]="commons['close']" [color]="commons['red']" [size]="commons['cent']" (tapp)="back($event)"></ns-buttons>
+            <ns-buttons [text]="commons['addmore']" [color]="commons['blue']" [size]="commons['cent']" (tapp)="addTasks($event)"></ns-buttons>
+            <ns-buttons [text]="commons['done']" [color]="commons['green']" [size]="commons['cent']" (tapp)="done($event)"></ns-buttons> -->
+
+            <ns-buttons [text]="commons['close']" [color]="commons['red']" [size]="commons['half']" (tapp)="back($event)"
+                *ngIf="action==undefined">
+            </ns-buttons>
+            <ns-buttons [text]="commons['addmore']" [color]="commons['blue']" [size]="commons['half']" (tapp)="addTasks($event)"
+                *ngIf="action==undefined">
+            </ns-buttons>
+            <ns-buttons [text]="commons['close']" [color]="commons['red']" [size]="commons['full']" (tapp)="back($event)"
+                *ngIf="action!=undefined">
+            </ns-buttons>
+
+            <!-- also works fine with default 'tap' event-->
+            <!-- <ns-buttons [text]="commons['close']" [color]="commons['red']" [size]="commons['cent']" (tap)="back($event)"></ns-buttons>
+            <ns-buttons [text]="commons['addmore']" [color]="commons['blue']" [size]="commons['cent']" (tap)="addTasks($event)"></ns-buttons>
+            <ns-buttons [text]="commons['done']" [color]="commons['green']" [size]="commons['cent']" (tap)="done($event)"></ns-buttons> -->
+        </FlexboxLayout>
+    </StackLayout>
+</GridLayout>
+

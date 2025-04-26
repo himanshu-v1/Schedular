@@ -1,0 +1,120 @@
+.btn{
+    width: 80%;
+    border-radius: 50;
+    border-width: 1;
+    background: linear-gradient(90deg, #6997c9, #007bff, #6997c9);
+    color: white;
+}
+
+.btn-red{
+    width: 80%;
+    border-radius: 50;
+    border-width: 1;
+    background: red;
+    color: white;
+}
+
+.btn-green{
+    width: 80%;
+    border-radius: 50;
+    border-width: 1;
+    background: green;
+    color: white;
+}
+
+.dual-btn{
+    width: 40%;
+    border-radius: 50;
+    border-width: 1;
+    background: linear-gradient(90deg, #bcd4ee, #007bff, #bcd4ee);
+    color: white;
+    font-size: 15;
+}
+
+.dual-btn-red{
+    width: 40%;
+    border-radius: 50;
+    border-width: 1;
+    background: red;
+    color: white;
+    font-size: 15;
+}
+
+.dual-btn-green{
+    width: 40%;
+    border-radius: 50;
+    border-width: 1;
+    background: green;
+    color: white;
+    font-size: 15;
+}
+
+.tripple-btn{
+    width: 30%;
+    border-radius: 50;
+    border-width: 1;
+    background: linear-gradient(90deg, #bcd4ee, #007bff, #bcd4ee);
+    color: white;
+    font-size: 15;
+}
+
+.tripple-btn-red{
+    width: 30%;
+    border-radius: 50;
+    border-width: 1;
+    background: red;
+    color: white;
+    font-size: 15;
+}
+
+.tripple-btn-green{
+    width: 30%;
+    border-radius: 50;
+    border-width: 1;
+    background: green;
+    color: white;
+    font-size: 15;
+}
+
+.btn_round_blue{
+    width: 50;
+    height: 50;
+    border-radius: 50;
+    border-width: 1;
+    background: #007bff;
+    color: white;
+    font-size: 25;
+    font-weight: bold;
+}
+
+.btn_round_red{
+    width: 50;
+    height: 50;
+    border-radius: 50;
+    border-width: 1;
+    background: red;
+    color: white;
+    font-size: 25;
+    font-weight: bold;
+}
+
+.btn_round_green{
+    width: 50;
+    border-radius: 50;
+    border-width: 1;
+    background: palegreen;
+    color: white;
+    font-size: 25;
+    font-weight: bold;
+}
+
+.btn_round_white{
+    width: 50;
+    height: 50;
+    border-radius: 50;
+    border-width: 1;
+    background: white;
+    color: #007bff;
+    font-size: 25;
+    font-weight: bold;
+}

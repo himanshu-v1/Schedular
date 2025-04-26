@@ -1,0 +1,4 @@
+D:\Android\Project\NativeScript\schedular\platforms\android\app\src\main\assets\app\bundle.js
+D:\Android\Project\NativeScript\schedular\platforms\android\app\src\main\assets\app\runtime.js
+D:\Android\Project\NativeScript\schedular\platforms\android\app\src\main\assets\app\tns-java-classes.js
+D:\Android\Project\NativeScript\schedular\platforms\android\app\src\main\assets\app\vendor.js

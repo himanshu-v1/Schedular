@@ -1,0 +1,45 @@
+<AbsoluteLayout>
+    <FlexboxLayout
+        justifyContent="space-around" alignItems="center"
+        [ngClass]="optionShow" *ngIf="classObj.options"
+        (tap)="close()">
+        <Label text="&#xf06e;" class="far head optionText" (tap)="view()"></Label>
+        <Label text="&#xf044;" class="far head optionText" (tap)="edit()"></Label>
+        <Label text="&#xf067;" class="fas head optionText" (tap)="add()"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout top="0" left="0" height="100%" width="100%" [ngClass]="classObj">
+        <GridLayout rows="*,*,5*" col="*" class="main">
+            <FlexboxLayout flexDirection="column" justifyContent="center" alignItems="center" row="0" col="0">
+                <!-- <ListPicker [items]="years" class="picker" selectedIndex=0 width="500"></ListPicker> -->
+                <Label text="{{currYear}}" class="head h3" (tap)="changeYear()" *ngIf="yearDDShow==false"></Label>
+                <ListView width="100" height="50" [items]="years" class="picker" androidElevation="5" *ngIf="yearDDShow==true">
+                        <ng-template let-item="item" let-i="index">
+                            <Label [text]="item" (tap)="onChangeYear(i)"></Label>
+                        </ng-template>
+                </ListView>
+            </FlexboxLayout>
+            <FlexboxLayout flexDirection="row" justifyContent="space-around" row="1" col="0">
+                <StackLayout>
+                    <Label text="&#xf104;" class="fas head h2" style="padding-left: 10; padding-right: 10;" (tap)="previousMonth()" *ngIf="hidePrev==false"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label text="{{currMonth | uppercase}}" class="head h2"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label text="&#xf105;" class="fas head h2" style="padding-left: 10; padding-right: 10;" (tap)="nextMonth()" *ngIf="hideNext==false"></Label>
+                    <Label text=" " class="fas head h2" *ngIf="hideNext==true"></Label>
+                </StackLayout>
+            </FlexboxLayout>
+            <FlexboxLayout row="2" col="0" (swipe)="swipeAction($event)">
+                <GridLayout rows="*,*,*,*,*,*,*" columns="*,*,*,*,*,*,*">
+                    <Label *ngFor="let day of weekDays; let i = index" [text]="day |uppercase" row="0" [col]="i" class="centerAl headDays">
+                    </Label>
+                    <Label *ngFor="let eDay of days" [text]="eDay.dateOfMonth" [row]="eDay.row" [col]="eDay.dayOfMonth"
+                        class="bItems centerAl" [ngStyle]="{ 'background' : eDay.disabled? '#9999ff' : eDay.isToday?'blue':'white', 'opacity' : eDay.disabled? '0.3':'1', 'color' : eDay.isToday?'white':'black' }"
+                        (tap)="showOptions(eDay.dateOfMonth, eDay.disabled)">
+                    </Label>
+                </GridLayout>
+            </FlexboxLayout>
+        </GridLayout>
+    </FlexboxLayout>
+</AbsoluteLayout>

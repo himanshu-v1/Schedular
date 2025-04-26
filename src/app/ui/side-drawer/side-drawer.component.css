@@ -1,0 +1,16 @@
+.main{
+    background: #007bff;
+}
+
+.header{
+  /* font-size: 25; */
+  color: white;
+  text-align: center;
+  padding-top: 0;
+  /* margin-top: -20; */
+}
+
+.mHead{
+  height: 50;
+  margin-top: 0;
+}
